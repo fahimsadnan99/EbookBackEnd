@@ -28,6 +28,10 @@ app.use("/api", User)
 app.use("/api", Room)
 app.use("/api",ConfrimRoom)
 
+app.get('/', (req, res) => { 
+
+  res.send("GET Request Called") 
+}) 
 let PORT = process.env.PORT || 5001
 
 app.listen(PORT, ()=>{
