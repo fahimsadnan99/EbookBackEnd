@@ -5,6 +5,8 @@ const upload = require("../Multer/multer")
 let Routers = express.Router();
 
  Routers.route("/")
- .post(upload.single("file"),imgUploader)
+ .post(imgUploader)
+//  .post(upload.single("file"),imgUploader)
+
 
  module.exports = Routers;

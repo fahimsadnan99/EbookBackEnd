@@ -7,13 +7,15 @@ const path = require("path");
 const ImgUploade = require('./routes/imgUploadeRoute');
 const User = require('./routes/UserRoute');
 const Room = require('./routes/Room');
-const ConfrimRoom = require('./routes/ConfirmRouter')
+const ConfrimRoom = require('./routes/ConfirmRouter');
+const { urlencoded } = require('express');
 
 
 
 let app = express();
 app.use(morgan("dev"));
 app.use(express.json())
+app.use(express.urlencoded({limit : "25mb"}))
 app.use(cors())
 
 
